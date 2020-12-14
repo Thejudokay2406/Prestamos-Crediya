@@ -33,6 +33,7 @@ namespace Datos
                 Comando.Parameters.Add("@Tran_Codeudor", SqlDbType.Int).Value = Obj.Tran_Codeudor;
                 
                 //Datos Basicos
+                Comando.Parameters.Add("@Orden", SqlDbType.VarChar).Value = Obj.Orden;
                 Comando.Parameters.Add("@Solicitante", SqlDbType.VarChar).Value = Obj.Solicitante;
                 Comando.Parameters.Add("@Identificacion", SqlDbType.VarChar).Value = Obj.Identificacion;
                 Comando.Parameters.Add("@Valor", SqlDbType.VarChar).Value = Obj.Valor;

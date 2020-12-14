@@ -308,26 +308,31 @@ namespace Prestamos_Crediya
             {
                 string rptaDatosBasicos = "";
 
-                if (this.TBNombres.Text == string.Empty)
+                if (this.TBNombres.Text == Campo)
                 {
                     MensajeError("Falta ingresar el campo solicitante.");
                     TBNombres.BackColor = Color.FromArgb(250, 235, 215);
                 }
-                else if (this.TBIdentificacion.Text == string.Empty)
+                else if (this.TBIdentificacion.Text == Campo)
                 {
                     MensajeError("Falta ingresar el campo identificación del solicitante.");
                     TBIdentificacion.BackColor = Color.FromArgb(250, 235, 215);
                 }
-                else if (this.TBValorSolicitado.Text == string.Empty)
+                else if (this.TBValorSolicitado.Text == Campo)
                 {
                     MensajeError("Falta ingresar el valor solicitado.");
                     TBValorSolicitado.BackColor = Color.FromArgb(250, 235, 215);
                 }
-                //else if (this.CBCodeudor.Text == string.Empty)
-                //{
-                //    MensajeError("Seleccione el Codeudor de la Solicitud a Registrar");
-                //    CBCodeudor.BackColor = Color.FromArgb(250, 235, 215);
-                //}
+                else if (this.CBEstado.SelectedIndex == 0)
+                {
+                    MensajeError("Seleccione el Estado de la Solicitud a Registrar");
+                    //CBCodeudor.BackColor = Color.FromArgb(250, 235, 215);
+                }
+                else if (this.CBModalidad.SelectedIndex == 0)
+                {
+                    MensajeError("Seleccione la Modalidad de Pagos del Prestamo");
+                    //CBCodeudor.BackColor = Color.FromArgb(250, 235, 215);
+                }
 
                 else
                 {
@@ -389,12 +394,12 @@ namespace Prestamos_Crediya
                     {
                         if (this.Digitar)
                         {
-                            this.MensajeOk("La Solicitud de: " + this.TBNombres.Text + " con Codigo: " + this.TBCodigoID.Text + " a Sido Registrada Correctamente");
+                            this.MensajeOk("La Solicitud de: " + this.TBNombres.Text + " con Codigo: " + this.TBOrdenDeSolicitud.Text + " a Sido Registrada Correctamente");
                         }
 
                         else
                         {
-                            this.MensajeOk("El Registro de La Solicitud de: " + this.TBNombres.Text + " con Codigo: " + this.TBCodigoID.Text + " a Sido Actualizado Correctamente");
+                            this.MensajeOk("El Registro de La Solicitud de: " + this.TBNombres.Text + " con Codigo: " + this.TBOrdenDeSolicitud.Text + " a Sido Actualizado Correctamente");
                         }
                     }
 

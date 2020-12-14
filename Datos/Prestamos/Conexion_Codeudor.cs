@@ -143,8 +143,38 @@ namespace Datos
         }
 
         //Metodo Eliminar
-
         public string Eliminar(int IDEliminar_Sql, int auto)
+        {
+            string Rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion_SQLServer.getInstancia().Conexion();
+                SqlCommand Comando = new SqlCommand("Consulta.Codeudor", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+
+                //Panel Datos Basicos
+                Comando.Parameters.Add("@Eliminar", SqlDbType.Int).Value = auto;
+                Comando.Parameters.Add("@Idcodeudor", SqlDbType.Int).Value = IDEliminar_Sql;
+
+                SqlCon.Open();
+                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "Error al Eliminar el Registro";
+            }
+            catch (Exception ex)
+            {
+                Rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                {
+                    SqlCon.Close();
+                }
+            }
+            return Rpta;
+        }
+
+        public string Eliminar_Codeudor(int IDEliminar_Sql, int auto)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();

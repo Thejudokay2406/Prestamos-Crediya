@@ -788,6 +788,7 @@ namespace Prestamos_Crediya
             this.Name = "frmCodeudor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prestamos - Codeudor";
+            this.Activated += new System.EventHandler(this.frmCodeudor_Activated);
             this.Load += new System.EventHandler(this.frmCodeudor_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Prestamos\fSolicitudes.cs" />
     <Compile Include="Prestamos\fConsignacion.cs" />
     <Compile Include="Sistema\fUsuario.cs" />
     <Compile Include="Sistema\fEquipos.cs" />

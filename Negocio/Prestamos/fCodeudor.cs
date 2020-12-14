@@ -102,5 +102,10 @@ namespace Negocio
             Conexion_Codeudor Datos = new Conexion_Codeudor();
             return Datos.Eliminar(IDEliminar_SQL, auto);
         }
+        public static string Eliminar_Codeudor(int IDEliminar_SQL, int auto)
+        {
+            Conexion_Codeudor Datos = new Conexion_Codeudor();
+            return Datos.Eliminar_Codeudor(IDEliminar_SQL, auto);
+        }
     }
 }

@@ -44,14 +44,16 @@ namespace Prestamos_Crediya
                 frmSolicitud frmSol = frmSolicitud.GetInstancia();
 
                 //Variables Para Los Filtros
-                string idcodeudor, codeudor, documento;
+                string idcodeudor, codeudor, documento, empresa, cargo;
 
                 if (frmSol.Filtro)
                 {
                     idcodeudor = this.DGFiltro_Resultados.CurrentRow.Cells[0].Value.ToString();
                     codeudor = this.DGFiltro_Resultados.CurrentRow.Cells[1].Value.ToString();
                     documento = this.DGFiltro_Resultados.CurrentRow.Cells[2].Value.ToString();
-                    frmSol.setCodeudor(idcodeudor, codeudor, documento);
+                    empresa = this.DGFiltro_Resultados.CurrentRow.Cells[3].Value.ToString();
+                    cargo = this.DGFiltro_Resultados.CurrentRow.Cells[4].Value.ToString();
+                    frmSol.setCodeudor(idcodeudor, codeudor, documento, empresa, cargo);
                     this.Hide();
                 }
             }

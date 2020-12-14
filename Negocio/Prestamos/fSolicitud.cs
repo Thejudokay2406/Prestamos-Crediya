@@ -43,14 +43,17 @@ namespace Negocio
                 Byte[] pagare, Byte[] codeudor, Byte[] deudor, Byte[] otrosdoc,
 
                 //Panel Impuestos
-                DataTable detalle_codeudor
+                DataTable detalle_codeudor,
+
+                //Datos Auxiliares
+                int codeudor_autosql,
+
+                //SE VALIDA SI SE REALIZA O NO LA VALIDACION
+                int tran_codeudor
             )
         {
             Conexion_Solicitud Datos = new Conexion_Solicitud();
             Entidad_Solicitud Obj = new Entidad_Solicitud();
-
-            //Datos Auxiliares
-            Obj.Auto = auto;
 
             //Datos Basicos
             Obj.Orden = orden;
@@ -84,6 +87,13 @@ namespace Negocio
 
             //Panel Impuestos
             Obj.Detalle_Codeudor = detalle_codeudor;
+
+            //Datos Auxiliares
+            Obj.Auto = auto;
+
+            Obj.Tran_Codeudor = tran_codeudor;
+
+            Obj.Codeudor_AutoSQL = codeudor_autosql;
 
             return Datos.Guardar_DatosBasicos(Obj);
         }

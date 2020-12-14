@@ -27,6 +27,11 @@ namespace Datos
                 //Datos Auxiliares
                 Comando.Parameters.Add("@Auto", SqlDbType.Int).Value = Obj.Auto;
 
+                Comando.Parameters.Add("@Codeudor_AutoSQL", SqlDbType.Int).Value = Obj.Codeudor_AutoSQL;
+                
+                //Variables Para Ejecutar Si o No Las Transacciones
+                Comando.Parameters.Add("@Tran_Codeudor", SqlDbType.Int).Value = Obj.Tran_Codeudor;
+                
                 //Datos Basicos
                 Comando.Parameters.Add("@Solicitante", SqlDbType.VarChar).Value = Obj.Solicitante;
                 Comando.Parameters.Add("@Identificacion", SqlDbType.VarChar).Value = Obj.Identificacion;

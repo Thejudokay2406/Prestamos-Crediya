@@ -47,6 +47,12 @@ namespace Entidad
         //
         private DataTable _Detalle_Codeudor;
 
+        //Datos para Ejecutar las Transacciones en SQL
+        private int _Codeudor_AutoSQL;
+        
+        //
+        private int _Tran_Codeudor;
+        
         //Datos Auxiliares
         private int _Auto;
         private int _Eliminar;
@@ -84,5 +90,7 @@ namespace Entidad
         public int Eliminar { get => _Eliminar; set => _Eliminar = value; }
         public string Filtro { get => _Filtro; set => _Filtro = value; }
         public DataTable Detalle_Codeudor { get => _Detalle_Codeudor; set => _Detalle_Codeudor = value; }
+        public int Codeudor_AutoSQL { get => _Codeudor_AutoSQL; set => _Codeudor_AutoSQL = value; }
+        public int Tran_Codeudor { get => _Tran_Codeudor; set => _Tran_Codeudor = value; }
     }
 }

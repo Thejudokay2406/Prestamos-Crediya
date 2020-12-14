@@ -1923,5 +1923,10 @@ namespace Prestamos_Crediya
         {
 
         }
+
+        private void frmCodeudor_Activated(object sender, EventArgs e)
+        {
+            this.TBCodeudor.Focus();
+        }
     }
 }

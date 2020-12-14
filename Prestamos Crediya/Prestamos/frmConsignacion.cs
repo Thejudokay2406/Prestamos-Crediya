@@ -684,51 +684,11 @@ namespace Prestamos_Crediya
         {
             try
             {
-                if (Eliminar_Consignacion)
-                {
-                    if (Eliminar == "1")
-                    {
-                        DialogResult Opcion;
-                        string Respuesta = "";
-                        int Idconsignacion, Idabono;
+                int Fila = this.DGLista_Abonos.CurrentCell.RowIndex;
+                DataRow row = this.DtDetalle_Consignacion.Rows[Fila];
 
-                        Opcion = MessageBox.Show("Desea Eliminar el Registro Seleccionado", "Crediya", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-                        if (Opcion == DialogResult.OK)
-                        {
-                            if (DGLista_Abonos.SelectedRows.Count > 0)
-                            {
-                                Idconsignacion = Convert.ToInt32(DGLista_Abonos.CurrentRow.Cells[0].Value.ToString());
-                                //Idabono = Convert.ToInt32(DGLista_Abonos.CurrentRow.Cells["Idubicacion"].Value.ToString());
-                                Respuesta = Negocio.fConsignacion.Eliminar_Abono(Idconsignacion, 1);
-                            }
-
-                            if (Respuesta.Equals("OK"))
-                            {
-                                this.MensajeOk("Consignación Eliminada Correctamente");
-                            }
-                            else
-                            {
-                                this.MensajeError(Respuesta);
-                            }
-                        }
-
-                        //
-                        this.Actualizar_DetConsignacion();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Acceso Denegado Para Realizar Eliminaciones en el Sistema", "Crediya - Solicitud Rechazada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
-                else
-                {
-                    int Fila = this.DGLista_Abonos.CurrentCell.RowIndex;
-                    DataRow row = this.DtDetalle_Consignacion.Rows[Fila];
-
-                    //Se remueve la fila
-                    this.DtDetalle_Consignacion.Rows.Remove(row);
-                }
+                //Se remueve la fila
+                this.DtDetalle_Consignacion.Rows.Remove(row);
             }
             catch (Exception ex)
             {
@@ -740,39 +700,40 @@ namespace Prestamos_Crediya
         {
             try
             {
-                //string rptaDatosBasicos = "";
+                if (Eliminar == "1")
+                {
+                    DialogResult Opcion;
+                    string Respuesta = "";
+                    int Idconsignacion, Idabono;
 
-                ////Datos Basicos
-                //if (this.TBIddatosbasicos.Text == string.Empty)
-                //{
-                //    MensajeError("Por Favor Seleccione la Solicitud a Eliminar");
-                //    TBIddatosbasicos.BackColor = Color.FromArgb(250, 235, 215);
-                //}
+                    Opcion = MessageBox.Show("Desea Eliminar el Registro Seleccionado", "Crediya", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-                //else
-                //{
-                //    if (this.IsEditar)
-                //    {
-                //        rptaDatosBasicos = fPrestamos_Liquidacion.Eliminar_SolicitudDeCredito
-                //            (
-                //                Convert.ToInt32(this.TBIddatosbasicos.Text), 0
-                //            );
-                //    }
+                    if (Opcion == DialogResult.OK)
+                    {
+                        if (DGLista_Abonos.SelectedRows.Count > 0)
+                        {
+                            Idconsignacion = Convert.ToInt32(DGLista_Abonos.CurrentRow.Cells[0].Value.ToString());
+                            //Idabono = Convert.ToInt32(DGLista_Abonos.CurrentRow.Cells["Idubicacion"].Value.ToString());
+                            Respuesta = Negocio.fConsignacion.Eliminar_Abono(Idconsignacion, 1);
+                        }
 
-                //    if (rptaDatosBasicos.Equals("OK"))
-                //    {
-                //        if (this.IsEditar)
-                //        {
-                //            this.MensajeOk("Solicitud Eliminada");
-                //        }
-                //    }
+                        if (Respuesta.Equals("OK"))
+                        {
+                            this.MensajeOk("Consignación Eliminada Correctamente");
+                        }
+                        else
+                        {
+                            this.MensajeError(Respuesta);
+                        }
+                    }
 
-                //    else
-                //    {
-                //        this.MensajeError(rptaDatosBasicos);
-                //    }
-
-                //}
+                    //
+                    this.Actualizar_DetConsignacion();
+                }
+                else
+                {
+                    MessageBox.Show("Acceso Denegado Para Realizar Eliminaciones en el Sistema", "Crediya - Solicitud Rechazada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             catch (Exception ex)
             {

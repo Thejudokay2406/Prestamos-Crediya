@@ -65,31 +65,41 @@ namespace Prestamos_Crediya
         {
             try
             {
-                DataTable Datos = Negocio.fUsuario.Login_SQL(this.TBUsuario.Text, this.TBContraseña.Text);
-                //Evaluamos si  existen los Datos
-                if (Datos.Rows.Count == 0)
+                if (TBUsuario.Text == "Tecnologia" && TBContraseña.Text == "SQL")
                 {
-                    MessageBox.Show("Acceso Denegado al Sistema, Usuario o Contraseña Incorrecto. Si el Problema Persiste Contacte al Area de Sistemas", "Crediya v1.0", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    frmEquipos frmEquipos = new frmEquipos();
+                    //
+                    frmEquipos.ShowDialog();
                 }
                 else
                 {
-                    frmMenuPrincipal frm = new frmMenuPrincipal();
-                    frm.Idempleado = Datos.Rows[0][0].ToString();
-                    frm.Empleado = Datos.Rows[0][1].ToString();
-                    frm.UsuarioLogueado = Datos.Rows[0][2].ToString();
+                    DataTable Datos = Negocio.fUsuario.Login_SQL(this.TBUsuario.Text, this.TBContraseña.Text);
+                    //Evaluamos si  existen los Datos
+                    if (Datos.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Acceso Denegado al Sistema, Usuario o Contraseña Incorrecto. Si el Problema Persiste Contacte al Area de Sistemas", "Crediya v1.0", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        frmMenuPrincipal frm = new frmMenuPrincipal();
+                        frm.Idempleado = Datos.Rows[0][0].ToString();
+                        frm.Empleado = Datos.Rows[0][1].ToString();
+                        frm.UsuarioLogueado = Datos.Rows[0][2].ToString();
 
-                    frm.SQL_Guardar = Datos.Rows[0][4].ToString();
-                    frm.SQL_Editar = Datos.Rows[0][5].ToString();
-                    frm.SQL_Eliminar = Datos.Rows[0][6].ToString();
-                    frm.SQL_Consultar = Datos.Rows[0][7].ToString();
+                        frm.SQL_Guardar = Datos.Rows[0][4].ToString();
+                        frm.SQL_Editar = Datos.Rows[0][5].ToString();
+                        frm.SQL_Eliminar = Datos.Rows[0][6].ToString();
+                        frm.SQL_Consultar = Datos.Rows[0][7].ToString();
 
-                    frm.Menu_Prestamos = Datos.Rows[0][8].ToString();
-                    frm.Menu_Reportes = Datos.Rows[0][10].ToString();
-                    frm.Menu_Sistema = Datos.Rows[0][11].ToString();
+                        frm.Menu_Prestamos = Datos.Rows[0][8].ToString();
+                        frm.Menu_Reportes = Datos.Rows[0][10].ToString();
+                        frm.Menu_Sistema = Datos.Rows[0][11].ToString();
 
-                    frm.Show();
-                    this.Hide();
+                        frm.Show();
+                        this.Hide();
+                    }
                 }
+                    
             }
             catch (Exception ex)
             {

@@ -89,6 +89,12 @@
     <Compile Include="Filtros\frmFiltro_Codeudor.Designer.cs">
       <DependentUpon>frmFiltro_Codeudor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEquipos.Designer.cs">
+      <DependentUpon>frmEquipos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prestamos\frmSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Filtros\frmFiltro_Solicitud.resx">
       <DependentUpon>frmFiltro_Solicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEquipos.resx">
+      <DependentUpon>frmEquipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prestamos\frmConsignacion.resx">
       <DependentUpon>frmConsignacion.cs</DependentUpon>

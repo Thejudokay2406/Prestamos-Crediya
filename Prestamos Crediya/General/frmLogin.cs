@@ -131,9 +131,9 @@ namespace Prestamos_Crediya
                     {
                         if (TBUsuario.Text == "Tecnologia" && TBContraseña.Text == "SQL")
                         {
-                            //frmEquipos frmEquipos = new frmEquipos();
-                            ////
-                            //frmEquipos.ShowDialog();
+                            frmEquipos frmEquipos = new frmEquipos();
+                            //
+                            frmEquipos.ShowDialog();
                         }
                         else
                         {

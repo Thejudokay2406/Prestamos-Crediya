@@ -2260,6 +2260,11 @@ namespace Prestamos_Crediya
             this.TBObservacion.BackColor = Color.FromArgb(3, 155, 229);
         }
 
+        private void frmSolicitud_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _Instancia = null;
+        }
+
         private void Foto_Otros_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();

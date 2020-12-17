@@ -99,6 +99,10 @@ namespace Prestamos_Crediya
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Foto_Codeudor = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TBFiltro_Cargo = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.TBFiltro_Empresa = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.TBBuscar_Codeudor02 = new System.Windows.Forms.TextBox();
             this.lblTotal_Detalles = new System.Windows.Forms.Label();
             this.btnEliminar_Codeudor = new System.Windows.Forms.Button();
@@ -110,10 +114,6 @@ namespace Prestamos_Crediya
             this.TBIdsolicitud = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.TBCodigoID = new System.Windows.Forms.TextBox();
-            this.TBFiltro_Empresa = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.TBFiltro_Cargo = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGResultados)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -946,6 +946,40 @@ namespace Prestamos_Crediya
             this.tabPage1.Text = "Codeudor";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // TBFiltro_Cargo
+            // 
+            this.TBFiltro_Cargo.Location = new System.Drawing.Point(371, 33);
+            this.TBFiltro_Cargo.Name = "TBFiltro_Cargo";
+            this.TBFiltro_Cargo.Size = new System.Drawing.Size(255, 21);
+            this.TBFiltro_Cargo.TabIndex = 169;
+            this.TBFiltro_Cargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(325, 36);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(40, 15);
+            this.label28.TabIndex = 168;
+            this.label28.Text = "Cargo";
+            // 
+            // TBFiltro_Empresa
+            // 
+            this.TBFiltro_Empresa.Location = new System.Drawing.Point(73, 33);
+            this.TBFiltro_Empresa.Name = "TBFiltro_Empresa";
+            this.TBFiltro_Empresa.Size = new System.Drawing.Size(246, 21);
+            this.TBFiltro_Empresa.TabIndex = 167;
+            this.TBFiltro_Empresa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(6, 36);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(57, 15);
+            this.label27.TabIndex = 166;
+            this.label27.Text = "Empresa";
+            // 
             // TBBuscar_Codeudor02
             // 
             this.TBBuscar_Codeudor02.Location = new System.Drawing.Point(73, 6);
@@ -1081,40 +1115,6 @@ namespace Prestamos_Crediya
             this.TBCodigoID.TabIndex = 48;
             this.TBCodigoID.Text = "1";
             // 
-            // TBFiltro_Empresa
-            // 
-            this.TBFiltro_Empresa.Location = new System.Drawing.Point(73, 33);
-            this.TBFiltro_Empresa.Name = "TBFiltro_Empresa";
-            this.TBFiltro_Empresa.Size = new System.Drawing.Size(246, 21);
-            this.TBFiltro_Empresa.TabIndex = 167;
-            this.TBFiltro_Empresa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 36);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(57, 15);
-            this.label27.TabIndex = 166;
-            this.label27.Text = "Empresa";
-            // 
-            // TBFiltro_Cargo
-            // 
-            this.TBFiltro_Cargo.Location = new System.Drawing.Point(371, 33);
-            this.TBFiltro_Cargo.Name = "TBFiltro_Cargo";
-            this.TBFiltro_Cargo.Size = new System.Drawing.Size(255, 21);
-            this.TBFiltro_Cargo.TabIndex = 169;
-            this.TBFiltro_Cargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(325, 36);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(40, 15);
-            this.label28.TabIndex = 168;
-            this.label28.Text = "Cargo";
-            // 
             // frmSolicitud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1129,6 +1129,7 @@ namespace Prestamos_Crediya
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prestamos - Solicitud";
             this.Activated += new System.EventHandler(this.frmSolicitud_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSolicitud_FormClosing);
             this.Load += new System.EventHandler(this.frmSolicitud_Load);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();

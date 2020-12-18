@@ -85,6 +85,7 @@ namespace Prestamos_Crediya
             //Ocultacion de Texboxt
             this.TBCodigoID.Visible = false;
             this.TBIdsolicitud.Visible = false;
+            this.TBIdcodeudor.Visible = false;
 
             //Color para Texboxt Buscar
             this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
@@ -201,6 +202,7 @@ namespace Prestamos_Crediya
             this.TBBuscar_Codeudor02.Clear();
 
             this.DGCodeudor.DataSource = null;
+            this.TBNombres.Focus();
             //this.CBCodeudor.Items.Clear();
         }
 
@@ -282,13 +284,13 @@ namespace Prestamos_Crediya
             if (Digitar)
             {
                 this.btnGuardar.Enabled = true;
-                this.btnGuardar.Text = "Guardar";
+                this.btnGuardar.Text = "Guardar - F10";
                 this.btnCancelar.Enabled = false;
             }
             else if (!Digitar)
             {
                 this.btnGuardar.Enabled = true;
-                this.btnGuardar.Text = "Editar";
+                this.btnGuardar.Text = "Editar - F10";
                 this.btnCancelar.Enabled = true;
             }
         }
@@ -336,6 +338,11 @@ namespace Prestamos_Crediya
 
                 else
                 {
+                    //Insertar Foto Solicitud
+                    System.IO.MemoryStream ms01 = new System.IO.MemoryStream();
+                    this.Foto_Solicitud.Image.Save(ms01, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                    byte[] foto_solicitud = ms01.GetBuffer();
 
                     //Insertar Foto Pagare
                     System.IO.MemoryStream ms1 = new System.IO.MemoryStream();
@@ -361,6 +368,12 @@ namespace Prestamos_Crediya
 
                     byte[] foto_otros = ms4.GetBuffer();
 
+                    //Insertar Foto Otros Documentos 02
+                    System.IO.MemoryStream ms5 = new System.IO.MemoryStream();
+                    this.Foto_Otros02.Image.Save(ms5, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                    byte[] foto_otros02 = ms5.GetBuffer();
+
                     this.Validacion_SQL();
 
 
@@ -370,12 +383,12 @@ namespace Prestamos_Crediya
                             (
                                 //DATOS AUXILIARES
                                 1,
-                                
+
                                 //DATOS BASICOS
                                 Convert.ToInt32(this.TBOrdenDeSolicitud.Text), this.TBNombres.Text, this.TBIdentificacion.Text, this.TBValorSolicitado.Text, this.DTFechadesolicitud.Value, this.DTFechadeprestamo.Value, this.CBModalidad.Text, this.TBDireccion.Text, this.TBFijo.Text, this.TBMovil.Text, this.TBEmpresa.Text, this.TBCargo.Text, this.TBDireccion_Empresa.Text, this.TBEmpresa_Fijo.Text, this.TBEmpresa_Movil.Text, this.TBSalario.Text, this.TBOtrosIngresos.Text, this.TBReferencia.Text, this.CBParentesco.Text, this.TBReferencia_Direccion.Text, this.TBReferencia_Fijo.Text, this.TBReferencia_Movil.Text, this.TBObservacion.Text,
 
                                 //IMAGENES
-                                foto_pagare,foto_codeudor,foto_deudor,foto_otros,
+                                foto_solicitud, foto_pagare, foto_codeudor, foto_deudor, foto_otros, foto_otros02,
 
                                 //DETALLE CODEUDOR
                                 DtDetalle_Codeudor,
@@ -2263,6 +2276,32 @@ namespace Prestamos_Crediya
         private void frmSolicitud_FormClosing(object sender, FormClosingEventArgs e)
         {
             _Instancia = null;
+        }
+
+        private void Foto_Solicitud_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+
+            DialogResult result = dialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.Foto_Solicitud.SizeMode = PictureBoxSizeMode.StretchImage;
+                this.Foto_Solicitud.Image = Image.FromFile(dialog.FileName);
+            }
+        }
+
+        private void Foto_Otros02_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+
+            DialogResult result = dialog.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.Foto_Otros02.SizeMode = PictureBoxSizeMode.StretchImage;
+                this.Foto_Otros02.Image = Image.FromFile(dialog.FileName);
+            }
         }
 
         private void Foto_Otros_Click(object sender, EventArgs e)

@@ -38,7 +38,7 @@ namespace Datos
                 Comando.Parameters.Add("@Identificacion", SqlDbType.VarChar).Value = Obj.Identificacion;
                 Comando.Parameters.Add("@Valor", SqlDbType.VarChar).Value = Obj.Valor;
                 Comando.Parameters.Add("@Solicitud", SqlDbType.Date).Value = Obj.Solicitud;
-                Comando.Parameters.Add("@Prestamos", SqlDbType.VarChar).Value = Obj.Prestamos;
+                Comando.Parameters.Add("@Prestamos", SqlDbType.Date).Value = Obj.Prestamos;
                 Comando.Parameters.Add("@Modalidad", SqlDbType.VarChar).Value = Obj.Modalidad;
                 Comando.Parameters.Add("@Direccion", SqlDbType.VarChar).Value = Obj.Direccion;
                 Comando.Parameters.Add("@Fijo", SqlDbType.VarChar).Value = Obj.Fijo;
@@ -61,10 +61,12 @@ namespace Datos
                 Comando.Parameters.Add("@Det_Codeudor", SqlDbType.Structured).Value = Obj.Detalle_Codeudor;
 
                 //Panel Imagenes -- Campos NO Obligatorios
+                Comando.Parameters.Add("@FotoSolicitud", SqlDbType.Image).Value = Obj.Foto_Solicitud;
                 Comando.Parameters.Add("@Pagare", SqlDbType.Image).Value = Obj.Pagare;
                 Comando.Parameters.Add("@Codeudor", SqlDbType.Image).Value = Obj.Codeudor;
                 Comando.Parameters.Add("@Deudor", SqlDbType.Image).Value = Obj.Deudor;
                 Comando.Parameters.Add("@OtrosDoc", SqlDbType.Image).Value = Obj.OtrosDocumentos;
+                Comando.Parameters.Add("@OtrosDoc02", SqlDbType.Image).Value = Obj.OtrosDocumentos02;
 
                 //ejecutamos el envio de datos
                 SqlCon.Open();

@@ -39,10 +39,12 @@ namespace Entidad
         private string _Observacion;
 
         //Imagenes 
+        private byte[] _Foto_Solicitud;
         private byte[] _Pagare;
         private byte[] _Codeudor;
         private byte[] _Deudor;
         private byte[] _OtrosDocumentos;
+        private byte[] _OtrosDocumentos02;
 
         //
         private DataTable _Detalle_Codeudor;
@@ -92,5 +94,7 @@ namespace Entidad
         public DataTable Detalle_Codeudor { get => _Detalle_Codeudor; set => _Detalle_Codeudor = value; }
         public int Codeudor_AutoSQL { get => _Codeudor_AutoSQL; set => _Codeudor_AutoSQL = value; }
         public int Tran_Codeudor { get => _Tran_Codeudor; set => _Tran_Codeudor = value; }
+        public byte[] Foto_Solicitud { get => _Foto_Solicitud; set => _Foto_Solicitud = value; }
+        public byte[] OtrosDocumentos02 { get => _OtrosDocumentos02; set => _OtrosDocumentos02 = value; }
     }
 }

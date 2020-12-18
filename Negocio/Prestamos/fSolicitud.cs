@@ -40,7 +40,7 @@ namespace Negocio
                 int orden, string solicitante, string identificacion, string valor, DateTime solicitud, DateTime prestamo, string modalidad, string direccion, string fijo, string movil, string empresa, string cargo, string direccion_E, string fijo_E, string movil_e, string salario, string otros, string referencia, string parentesco, string direccion_r, string fijo_r, string movil_r, string observacion,
 
                 //Panel documentos
-                Byte[] pagare, Byte[] codeudor, Byte[] deudor, Byte[] otrosdoc,
+                Byte[] foto_solicitud, Byte[] pagare, Byte[] codeudor, Byte[] deudor, Byte[] otrosdoc, Byte[] otrosdoc02,
 
                 //Panel Impuestos
                 DataTable detalle_codeudor,
@@ -80,10 +80,12 @@ namespace Negocio
             Obj.Movil_R = movil_r;
             Obj.Observacion = observacion;
 
+            Obj.Foto_Solicitud = foto_solicitud;
             Obj.Pagare = pagare;
             Obj.Codeudor = codeudor;
             Obj.Deudor = deudor;
             Obj.OtrosDocumentos = otrosdoc;
+            Obj.OtrosDocumentos02 = otrosdoc02;
 
             //Panel Impuestos
             Obj.Detalle_Codeudor = detalle_codeudor;

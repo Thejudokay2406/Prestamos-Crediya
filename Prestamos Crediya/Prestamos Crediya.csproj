@@ -119,7 +119,7 @@
     <Compile Include="General\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Informacion_Computer.cs" />
+    <Compile Include="Sistema\Informacion_Computer.cs" />
     <Compile Include="Prestamos\frmCodeudor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,5 +252,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

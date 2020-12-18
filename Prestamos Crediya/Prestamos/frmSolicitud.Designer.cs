@@ -34,10 +34,10 @@ namespace Prestamos_Crediya
             this.lblTotal = new System.Windows.Forms.Label();
             this.TBBuscar = new System.Windows.Forms.TextBox();
             this.DGResultados = new System.Windows.Forms.DataGridView();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.TBIdcodeudor = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TPDatosBasicos = new System.Windows.Forms.TabPage();
@@ -90,6 +90,10 @@ namespace Prestamos_Crediya
             this.TBNombres = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TPDocumentos = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.Foto_Otros02 = new System.Windows.Forms.PictureBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.Foto_Solicitud = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.Foto_Pagare = new System.Windows.Forms.PictureBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -105,12 +109,12 @@ namespace Prestamos_Crediya
             this.label27 = new System.Windows.Forms.Label();
             this.TBBuscar_Codeudor02 = new System.Windows.Forms.TextBox();
             this.lblTotal_Detalles = new System.Windows.Forms.Label();
-            this.btnEliminar_Codeudor = new System.Windows.Forms.Button();
-            this.btnAgregar_Codeudor = new System.Windows.Forms.Button();
-            this.btnExaminar = new System.Windows.Forms.Button();
             this.DGCodeudor = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.TBBuscar_Codeudor = new System.Windows.Forms.TextBox();
+            this.btnEliminar_Codeudor = new System.Windows.Forms.Button();
+            this.btnAgregar_Codeudor = new System.Windows.Forms.Button();
+            this.btnExaminar = new System.Windows.Forms.Button();
             this.TBIdsolicitud = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.TBCodigoID = new System.Windows.Forms.TextBox();
@@ -120,6 +124,10 @@ namespace Prestamos_Crediya
             this.tabControl1.SuspendLayout();
             this.TPDatosBasicos.SuspendLayout();
             this.TPDocumentos.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_Otros02)).BeginInit();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_Solicitud)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Foto_Pagare)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -187,23 +195,6 @@ namespace Prestamos_Crediya
             this.DGResultados.TabIndex = 2;
             this.DGResultados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGResultados_CellDoubleClick);
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnEliminar.Image = global::Prestamos_Crediya.Botones.btnEliminar;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(399, 465);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(120, 30);
-            this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "Eliminar - F4";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnImprimir);
@@ -244,6 +235,23 @@ namespace Prestamos_Crediya
             this.TBIdcodeudor.Name = "TBIdcodeudor";
             this.TBIdcodeudor.Size = new System.Drawing.Size(23, 21);
             this.TBIdcodeudor.TabIndex = 62;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = global::Prestamos_Crediya.Botones.btnEliminar;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(399, 465);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(120, 30);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar - F4";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnCancelar
             // 
@@ -816,10 +824,12 @@ namespace Prestamos_Crediya
             // 
             // TPDocumentos
             // 
+            this.TPDocumentos.Controls.Add(this.groupBox8);
+            this.TPDocumentos.Controls.Add(this.groupBox2);
+            this.TPDocumentos.Controls.Add(this.groupBox7);
             this.TPDocumentos.Controls.Add(this.groupBox5);
             this.TPDocumentos.Controls.Add(this.groupBox4);
             this.TPDocumentos.Controls.Add(this.groupBox3);
-            this.TPDocumentos.Controls.Add(this.groupBox2);
             this.TPDocumentos.Location = new System.Drawing.Point(4, 24);
             this.TPDocumentos.Name = "TPDocumentos";
             this.TPDocumentos.Padding = new System.Windows.Forms.Padding(3);
@@ -828,15 +838,63 @@ namespace Prestamos_Crediya
             this.TPDocumentos.Text = "Documentos";
             this.TPDocumentos.UseVisualStyleBackColor = true;
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.Foto_Otros02);
+            this.groupBox8.Location = new System.Drawing.Point(424, 208);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(203, 196);
+            this.groupBox8.TabIndex = 5;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Otros Documentos";
+            // 
+            // Foto_Otros02
+            // 
+            this.Foto_Otros02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Foto_Otros02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Foto_Otros02.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Foto_Otros02.Image = global::Prestamos_Crediya.Properties.Resources.Crediya;
+            this.Foto_Otros02.Location = new System.Drawing.Point(6, 20);
+            this.Foto_Otros02.Name = "Foto_Otros02";
+            this.Foto_Otros02.Size = new System.Drawing.Size(190, 170);
+            this.Foto_Otros02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Foto_Otros02.TabIndex = 3;
+            this.Foto_Otros02.TabStop = false;
+            this.Foto_Otros02.Click += new System.EventHandler(this.Foto_Otros02_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.Foto_Solicitud);
+            this.groupBox7.Location = new System.Drawing.Point(6, 6);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(203, 196);
+            this.groupBox7.TabIndex = 7;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Solicitud de Credito";
+            // 
+            // Foto_Solicitud
+            // 
+            this.Foto_Solicitud.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Foto_Solicitud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Foto_Solicitud.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Foto_Solicitud.Image = global::Prestamos_Crediya.Properties.Resources.Crediya;
+            this.Foto_Solicitud.Location = new System.Drawing.Point(6, 20);
+            this.Foto_Solicitud.Name = "Foto_Solicitud";
+            this.Foto_Solicitud.Size = new System.Drawing.Size(190, 170);
+            this.Foto_Solicitud.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Foto_Solicitud.TabIndex = 6;
+            this.Foto_Solicitud.TabStop = false;
+            this.Foto_Solicitud.Click += new System.EventHandler(this.Foto_Solicitud_Click);
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.Foto_Pagare);
-            this.groupBox5.Location = new System.Drawing.Point(324, 211);
+            this.groupBox5.Location = new System.Drawing.Point(215, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(302, 196);
+            this.groupBox5.Size = new System.Drawing.Size(203, 196);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Escaner de Pagare";
+            this.groupBox5.Text = "Pagare de Deudor";
             // 
             // Foto_Pagare
             // 
@@ -846,7 +904,7 @@ namespace Prestamos_Crediya
             this.Foto_Pagare.Image = global::Prestamos_Crediya.Properties.Resources.Crediya;
             this.Foto_Pagare.Location = new System.Drawing.Point(6, 20);
             this.Foto_Pagare.Name = "Foto_Pagare";
-            this.Foto_Pagare.Size = new System.Drawing.Size(290, 170);
+            this.Foto_Pagare.Size = new System.Drawing.Size(190, 170);
             this.Foto_Pagare.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Foto_Pagare.TabIndex = 6;
             this.Foto_Pagare.TabStop = false;
@@ -855,12 +913,12 @@ namespace Prestamos_Crediya
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.Foto_Otros);
-            this.groupBox4.Location = new System.Drawing.Point(6, 211);
+            this.groupBox4.Location = new System.Drawing.Point(424, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(312, 196);
+            this.groupBox4.Size = new System.Drawing.Size(203, 196);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Otros Documentos 01";
+            this.groupBox4.Text = "Pagare de Codeudor";
             // 
             // Foto_Otros
             // 
@@ -870,7 +928,7 @@ namespace Prestamos_Crediya
             this.Foto_Otros.Image = global::Prestamos_Crediya.Properties.Resources.Crediya;
             this.Foto_Otros.Location = new System.Drawing.Point(6, 20);
             this.Foto_Otros.Name = "Foto_Otros";
-            this.Foto_Otros.Size = new System.Drawing.Size(300, 170);
+            this.Foto_Otros.Size = new System.Drawing.Size(190, 170);
             this.Foto_Otros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Foto_Otros.TabIndex = 3;
             this.Foto_Otros.TabStop = false;
@@ -879,9 +937,9 @@ namespace Prestamos_Crediya
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.Foto_Deudor);
-            this.groupBox3.Location = new System.Drawing.Point(324, 6);
+            this.groupBox3.Location = new System.Drawing.Point(6, 208);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(302, 196);
+            this.groupBox3.Size = new System.Drawing.Size(203, 196);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cedula Deudor";
@@ -894,7 +952,7 @@ namespace Prestamos_Crediya
             this.Foto_Deudor.Image = global::Prestamos_Crediya.Properties.Resources.Crediya;
             this.Foto_Deudor.Location = new System.Drawing.Point(6, 20);
             this.Foto_Deudor.Name = "Foto_Deudor";
-            this.Foto_Deudor.Size = new System.Drawing.Size(290, 170);
+            this.Foto_Deudor.Size = new System.Drawing.Size(190, 170);
             this.Foto_Deudor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Foto_Deudor.TabIndex = 3;
             this.Foto_Deudor.TabStop = false;
@@ -903,9 +961,9 @@ namespace Prestamos_Crediya
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Foto_Codeudor);
-            this.groupBox2.Location = new System.Drawing.Point(6, 6);
+            this.groupBox2.Location = new System.Drawing.Point(215, 208);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(312, 196);
+            this.groupBox2.Size = new System.Drawing.Size(203, 196);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cedula Codeudor";
@@ -918,7 +976,7 @@ namespace Prestamos_Crediya
             this.Foto_Codeudor.Image = global::Prestamos_Crediya.Properties.Resources.Crediya;
             this.Foto_Codeudor.Location = new System.Drawing.Point(6, 20);
             this.Foto_Codeudor.Name = "Foto_Codeudor";
-            this.Foto_Codeudor.Size = new System.Drawing.Size(300, 170);
+            this.Foto_Codeudor.Size = new System.Drawing.Size(190, 170);
             this.Foto_Codeudor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Foto_Codeudor.TabIndex = 3;
             this.Foto_Codeudor.TabStop = false;
@@ -932,12 +990,12 @@ namespace Prestamos_Crediya
             this.tabPage1.Controls.Add(this.label27);
             this.tabPage1.Controls.Add(this.TBBuscar_Codeudor02);
             this.tabPage1.Controls.Add(this.lblTotal_Detalles);
-            this.tabPage1.Controls.Add(this.btnEliminar_Codeudor);
-            this.tabPage1.Controls.Add(this.btnAgregar_Codeudor);
-            this.tabPage1.Controls.Add(this.btnExaminar);
             this.tabPage1.Controls.Add(this.DGCodeudor);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.TBBuscar_Codeudor);
+            this.tabPage1.Controls.Add(this.btnEliminar_Codeudor);
+            this.tabPage1.Controls.Add(this.btnAgregar_Codeudor);
+            this.tabPage1.Controls.Add(this.btnExaminar);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -997,6 +1055,38 @@ namespace Prestamos_Crediya
             this.lblTotal_Detalles.TabIndex = 163;
             this.lblTotal_Detalles.Text = "Datos Registrados: 0";
             // 
+            // DGCodeudor
+            // 
+            this.DGCodeudor.AllowUserToAddRows = false;
+            this.DGCodeudor.AllowUserToDeleteRows = false;
+            this.DGCodeudor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DGCodeudor.BackgroundColor = System.Drawing.Color.White;
+            this.DGCodeudor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGCodeudor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DGCodeudor.Location = new System.Drawing.Point(6, 60);
+            this.DGCodeudor.Name = "DGCodeudor";
+            this.DGCodeudor.ReadOnly = true;
+            this.DGCodeudor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGCodeudor.Size = new System.Drawing.Size(620, 311);
+            this.DGCodeudor.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Codeudor";
+            // 
+            // TBBuscar_Codeudor
+            // 
+            this.TBBuscar_Codeudor.Location = new System.Drawing.Point(220, 6);
+            this.TBBuscar_Codeudor.Name = "TBBuscar_Codeudor";
+            this.TBBuscar_Codeudor.Size = new System.Drawing.Size(372, 21);
+            this.TBBuscar_Codeudor.TabIndex = 5;
+            this.TBBuscar_Codeudor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // btnEliminar_Codeudor
             // 
             this.btnEliminar_Codeudor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1048,38 +1138,6 @@ namespace Prestamos_Crediya
             this.btnExaminar.TabIndex = 160;
             this.btnExaminar.UseVisualStyleBackColor = true;
             this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
-            // 
-            // DGCodeudor
-            // 
-            this.DGCodeudor.AllowUserToAddRows = false;
-            this.DGCodeudor.AllowUserToDeleteRows = false;
-            this.DGCodeudor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.DGCodeudor.BackgroundColor = System.Drawing.Color.White;
-            this.DGCodeudor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGCodeudor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DGCodeudor.Location = new System.Drawing.Point(6, 60);
-            this.DGCodeudor.Name = "DGCodeudor";
-            this.DGCodeudor.ReadOnly = true;
-            this.DGCodeudor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGCodeudor.Size = new System.Drawing.Size(620, 311);
-            this.DGCodeudor.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Codeudor";
-            // 
-            // TBBuscar_Codeudor
-            // 
-            this.TBBuscar_Codeudor.Location = new System.Drawing.Point(220, 6);
-            this.TBBuscar_Codeudor.Name = "TBBuscar_Codeudor";
-            this.TBBuscar_Codeudor.Size = new System.Drawing.Size(372, 21);
-            this.TBBuscar_Codeudor.TabIndex = 5;
-            this.TBBuscar_Codeudor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TBIdsolicitud
             // 
@@ -1140,6 +1198,10 @@ namespace Prestamos_Crediya
             this.TPDatosBasicos.ResumeLayout(false);
             this.TPDatosBasicos.PerformLayout();
             this.TPDocumentos.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_Otros02)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Foto_Solicitud)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Foto_Pagare)).EndInit();
             this.groupBox4.ResumeLayout(false);
@@ -1242,5 +1304,9 @@ namespace Prestamos_Crediya
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox TBFiltro_Empresa;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.PictureBox Foto_Solicitud;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.PictureBox Foto_Otros02;
     }
 }

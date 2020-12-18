@@ -59,6 +59,7 @@ namespace Prestamos_Crediya
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.TSEmpleadoRegistrado = new System.Windows.Forms.ToolStripLabel();
+            this.gastosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -84,9 +85,10 @@ namespace Prestamos_Crediya
             this.prestamosToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.prestamosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.codeudorToolStripMenuItem,
+            this.consignaciónToolStripMenuItem,
+            this.gastosToolStripMenuItem,
             this.liquidacionToolStripMenuItem,
-            this.solicitudToolStripMenuItem,
-            this.consignaciónToolStripMenuItem});
+            this.solicitudToolStripMenuItem});
             this.prestamosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.prestamosToolStripMenuItem.Name = "prestamosToolStripMenuItem";
             this.prestamosToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
@@ -95,27 +97,27 @@ namespace Prestamos_Crediya
             // codeudorToolStripMenuItem
             // 
             this.codeudorToolStripMenuItem.Name = "codeudorToolStripMenuItem";
-            this.codeudorToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.codeudorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.codeudorToolStripMenuItem.Text = "Codeudor";
             this.codeudorToolStripMenuItem.Click += new System.EventHandler(this.codeudorToolStripMenuItem_Click);
             // 
             // liquidacionToolStripMenuItem
             // 
             this.liquidacionToolStripMenuItem.Name = "liquidacionToolStripMenuItem";
-            this.liquidacionToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.liquidacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.liquidacionToolStripMenuItem.Text = "Liquidación";
             // 
             // solicitudToolStripMenuItem
             // 
             this.solicitudToolStripMenuItem.Name = "solicitudToolStripMenuItem";
-            this.solicitudToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.solicitudToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.solicitudToolStripMenuItem.Text = "Solicitud";
             this.solicitudToolStripMenuItem.Click += new System.EventHandler(this.solicitudToolStripMenuItem_Click);
             // 
             // consignaciónToolStripMenuItem
             // 
             this.consignaciónToolStripMenuItem.Name = "consignaciónToolStripMenuItem";
-            this.consignaciónToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.consignaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consignaciónToolStripMenuItem.Text = "Consignación";
             this.consignaciónToolStripMenuItem.Click += new System.EventHandler(this.consignaciónToolStripMenuItem_Click);
             // 
@@ -277,6 +279,12 @@ namespace Prestamos_Crediya
             this.TSEmpleadoRegistrado.Size = new System.Drawing.Size(19, 22);
             this.TSEmpleadoRegistrado.Text = "---";
             // 
+            // gastosToolStripMenuItem
+            // 
+            this.gastosToolStripMenuItem.Name = "gastosToolStripMenuItem";
+            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gastosToolStripMenuItem.Text = "Gastos";
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -334,6 +342,7 @@ namespace Prestamos_Crediya
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
         private System.Windows.Forms.ToolStripLabel TSEmpleadoRegistrado;
         private System.Windows.Forms.ToolStripMenuItem consignaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gastosToolStripMenuItem;
     }
 }
 

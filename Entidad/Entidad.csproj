@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Prestamos\Entidad_Gastos.cs" />
     <Compile Include="Prestamos\Entidad_Consignaciones.cs" />
     <Compile Include="Sistema\Entidad_Equipos.cs" />
     <Compile Include="Sistema\Entidad_Usuario.cs" />

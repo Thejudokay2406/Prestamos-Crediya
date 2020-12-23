@@ -50,6 +50,7 @@ namespace Prestamos_Crediya
             }
             return _Instancia;
         }
+
         public frmConsignacion()
         {
             InitializeComponent();
@@ -94,7 +95,6 @@ namespace Prestamos_Crediya
             //
             this.TBBuscar.BackColor = Color.FromArgb(3, 155, 229);
         }
-
 
         private void Limpiar_Datos()
         {

@@ -20,7 +20,7 @@ namespace Datos
         private Conexion_SQLServer()
         {
             this.Base = "Crediya";
-            this.Servidor = "DESKTOP-1F5MFEG";
+            this.Servidor = "SERVER";
             this.Usuario = "LealTecnologia";
             this.Contraseña = "TecnologiaLealSQL.XXX";
             this.Seguridad = true;

@@ -44,6 +44,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Conexiones_SQL\Conexion_SQLSeguridad.cs" />
     <Compile Include="Conexiones_SQL\Conexion_SQLServer.cs" />
+    <Compile Include="Prestamos\Conexion_Gastos.cs" />
     <Compile Include="Prestamos\Conexion_Consignacion.cs" />
     <Compile Include="Sistema\Conexion_Equipos.cs" />
     <Compile Include="Sistema\Conexion_Usuarios.cs" />

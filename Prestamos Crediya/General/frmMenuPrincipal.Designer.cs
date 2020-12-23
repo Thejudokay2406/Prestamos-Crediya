@@ -35,9 +35,10 @@ namespace Prestamos_Crediya
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.prestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.codeudorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consignaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gastosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.liquidacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solicitudToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consignaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.codeudorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.datosBasicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +60,6 @@ namespace Prestamos_Crediya
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.TSEmpleadoRegistrado = new System.Windows.Forms.ToolStripLabel();
-            this.gastosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +101,20 @@ namespace Prestamos_Crediya
             this.codeudorToolStripMenuItem.Text = "Codeudor";
             this.codeudorToolStripMenuItem.Click += new System.EventHandler(this.codeudorToolStripMenuItem_Click);
             // 
+            // consignaciónToolStripMenuItem
+            // 
+            this.consignaciónToolStripMenuItem.Name = "consignaciónToolStripMenuItem";
+            this.consignaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consignaciónToolStripMenuItem.Text = "Consignación";
+            this.consignaciónToolStripMenuItem.Click += new System.EventHandler(this.consignaciónToolStripMenuItem_Click);
+            // 
+            // gastosToolStripMenuItem
+            // 
+            this.gastosToolStripMenuItem.Name = "gastosToolStripMenuItem";
+            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gastosToolStripMenuItem.Text = "Gastos";
+            this.gastosToolStripMenuItem.Click += new System.EventHandler(this.gastosToolStripMenuItem_Click);
+            // 
             // liquidacionToolStripMenuItem
             // 
             this.liquidacionToolStripMenuItem.Name = "liquidacionToolStripMenuItem";
@@ -113,13 +127,6 @@ namespace Prestamos_Crediya
             this.solicitudToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.solicitudToolStripMenuItem.Text = "Solicitud";
             this.solicitudToolStripMenuItem.Click += new System.EventHandler(this.solicitudToolStripMenuItem_Click);
-            // 
-            // consignaciónToolStripMenuItem
-            // 
-            this.consignaciónToolStripMenuItem.Name = "consignaciónToolStripMenuItem";
-            this.consignaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consignaciónToolStripMenuItem.Text = "Consignación";
-            this.consignaciónToolStripMenuItem.Click += new System.EventHandler(this.consignaciónToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -278,12 +285,6 @@ namespace Prestamos_Crediya
             this.TSEmpleadoRegistrado.Name = "TSEmpleadoRegistrado";
             this.TSEmpleadoRegistrado.Size = new System.Drawing.Size(19, 22);
             this.TSEmpleadoRegistrado.Text = "---";
-            // 
-            // gastosToolStripMenuItem
-            // 
-            this.gastosToolStripMenuItem.Name = "gastosToolStripMenuItem";
-            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.gastosToolStripMenuItem.Text = "Gastos";
             // 
             // frmMenuPrincipal
             // 

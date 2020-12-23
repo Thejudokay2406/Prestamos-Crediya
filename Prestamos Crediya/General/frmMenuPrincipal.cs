@@ -119,5 +119,17 @@ namespace Prestamos_Crediya
             frmConsignacion.Eliminar = Convert.ToString(this.SQL_Eliminar);
             frmConsignacion.Consultar = Convert.ToString(this.SQL_Consultar);
         }
+
+        private void gastosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGastos frmGastos = new frmGastos();
+            frmGastos.MdiParent = this;
+            frmGastos.Show();
+
+            frmGastos.Guardar = Convert.ToString(this.SQL_Guardar);
+            frmGastos.Editar = Convert.ToString(this.SQL_Editar);
+            frmGastos.Eliminar = Convert.ToString(this.SQL_Eliminar);
+            frmGastos.Consultar = Convert.ToString(this.SQL_Consultar);
+        }
     }
 }

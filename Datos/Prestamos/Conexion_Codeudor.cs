@@ -12,6 +12,37 @@ namespace Datos
 {
     public class Conexion_Codeudor
     {
+        public DataTable Buscar(string Filtro, int Auto)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion_SQLServer.getInstancia().Conexion();
+                SqlCommand Comando = new SqlCommand("Consulta.Codeudor", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+
+                Comando.Parameters.Add("@Auto", SqlDbType.Int).Value = Auto;
+                Comando.Parameters.Add("@Filtro", SqlDbType.VarChar).Value = Filtro;
+
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                {
+                    SqlCon.Close();
+                }
+            }
+        }
         public string Guardar_DatosBasicos(Entidad_Codeudor Obj)
         {
             string Rpta = "";
@@ -108,38 +139,6 @@ namespace Datos
                 }
             }
             return Rpta;
-        }
-
-        public DataTable Buscar(string Filtro, int Auto)
-        {
-            SqlDataReader Resultado;
-            DataTable Tabla = new DataTable();
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {
-                SqlCon = Conexion_SQLServer.getInstancia().Conexion();
-                SqlCommand Comando = new SqlCommand("Consulta.Codeudor", SqlCon);
-                Comando.CommandType = CommandType.StoredProcedure;
-
-                Comando.Parameters.Add("@Auto", SqlDbType.Int).Value = Auto;
-                Comando.Parameters.Add("@Filtro", SqlDbType.VarChar).Value = Filtro;
-
-                SqlCon.Open();
-                Resultado = Comando.ExecuteReader();
-                Tabla.Load(Resultado);
-                return Tabla;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                if (SqlCon.State == ConnectionState.Open)
-                {
-                    SqlCon.Close();
-                }
-            }
         }
 
         //Metodo Eliminar
